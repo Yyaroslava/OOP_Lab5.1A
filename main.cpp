@@ -14,17 +14,14 @@ int main() {
 			result = true;
 			cin >> A;
 		}
-
 		catch (const char* str) {
 			result = false;
 			cerr << str << endl;
 		}
-
 		catch (bad_exception& e) {
 			result = false;
 			cerr << e.what() << endl;
 		}
-
 		catch (invalid_argument e) {
 			result = false;
 			cerr << e.what() << endl;
@@ -43,8 +40,8 @@ int main() {
 		cerr << e.what() << endl;
 	}
 
-	cout << "A.Deny(): " << endl;
-	A.Deny();
+	cout << "A.Check(): " << endl;
+	A.Check();
 
 	cout << "A.Function(): " << endl;
 	A.Function();

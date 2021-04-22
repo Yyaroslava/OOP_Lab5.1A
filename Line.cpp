@@ -82,10 +82,13 @@ istream& operator >> (istream& in, Line& line) throw(const char*, bad_exception&
 	if (line.first == line.second) {
 		throw bad_exception();
 	}
+	if (line.x == 100) {
+		throw invalid_argument("Error! ( x = 100 ) ");
+	}
 	return in;
 }
 
-double Line::Deny() {
+double Line::Check() {
 	cout << "A != 0 " << endl;
 	if (first != 0) {
 		cout << "Yes " << endl;

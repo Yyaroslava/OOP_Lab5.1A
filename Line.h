@@ -27,7 +27,7 @@ public:
 	operator string() const;
 	friend istream& operator >> (istream&, Line&);
 	friend ostream& operator << (ostream&, const Line&);
-	double Deny();
+	double Check();
 	double Function();
 
 	Line& operator ++();
